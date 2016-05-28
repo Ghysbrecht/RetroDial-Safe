@@ -40,7 +40,7 @@ unsigned long getNumber(){
   
   for(i=1;i<10;i++){ 
      number[i] = getValueOfDigit(i);
-     powerNumber = toThePower(10, (9-i));
+     powerNumber = pow(10, (9-i));
      additionNumber = number[i] * powerNumber;  
      completeNumber = completeNumber + additionNumber;
 
@@ -124,19 +124,3 @@ int getValueOfDigit(int digit){
   
   return value;
 }
-
-
-//Making my own power function
-unsigned long toThePower(int x, int y){
-  int i;
-  unsigned long result;
-  
-  if(y == 0) result = 1.0;
-  else result = x;
-  
-  for( i = 1; i < y; i++ ){
-    result = result * x;
-  }
-  return result;
-}
-
